@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Shree Neelkanth emblem">
+  <defs>
+    <linearGradient id="ring2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8def"/>
+      <stop offset="0.55" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#0a1a35"/>
+    </linearGradient>
+    <linearGradient id="peak2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cdddff"/>
+    </linearGradient>
+    <radialGradient id="sun2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f7d27a"/>
+      <stop offset="1" stop-color="#e6a817"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(80,80)">
+    <circle r="74" fill="url(#ring2)"/>
+    <circle r="62" fill="#0a1a35"/>
+    <g transform="translate(33,-37)">
+      <path d="M0,-15 a15,15 0 1,0 0.1,30 a11.5,11.5 0 1,1 -0.1,-30 z" fill="#f0bd45"/>
+    </g>
+    <circle cx="0" cy="8" r="20" fill="url(#sun2)"/>
+    <clipPath id="inner2"><circle r="62"/></clipPath>
+    <g clip-path="url(#inner2)">
+      <path d="M-62,30 L-18,-18 L8,12 L34,-20 L62,28 L62,62 L-62,62 Z" fill="#16409c"/>
+      <path d="M-62,42 L-26,2 L0,30 L26,-2 L62,42 L62,62 L-62,62 Z" fill="url(#peak2)"/>
+      <path d="M-26,2 L-12,18 L-26,18 Z" fill="#aac6ff" opacity="0.7"/>
+      <path d="M26,-2 L40,16 L26,16 Z" fill="#aac6ff" opacity="0.7"/>
+      <path d="M-62,52 q20,8 40,0 t40,0 t40,0" fill="none" stroke="#5b8def" stroke-width="3" opacity="0.85"/>
+    </g>
+  </g>
+</svg>

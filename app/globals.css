@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --cream: #f4f8ff; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: #0e1a30;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Per-language script fonts. Override the display/body vars so every
+   heading & paragraph picks up a font that actually has the glyphs. */
+.lang-hi { --font-display: var(--font-deva); --font-body: var(--font-deva); }
+.lang-ta { --font-display: var(--font-tamil); --font-body: var(--font-tamil); }
+.lang-kn { --font-display: var(--font-kannada); --font-body: var(--font-kannada); }
+.lang-te { --font-display: var(--font-telugu); --font-body: var(--font-telugu); }
+
+::selection { background: #1d4ed8; color: #fff; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #eef4ff; }
+::-webkit-scrollbar-thumb { background: #1d4ed8; border-radius: 999px; }
