@@ -8,7 +8,6 @@ import {
   Noto_Sans_Telugu,
 } from "next/font/google";
 import "./globals.css";
-import { LanguageProvider } from "@/lib/LanguageProvider";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -76,7 +75,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${devanagari.variable} ${tamil.variable} ${kannada.variable} ${telugu.variable}`}
     >
       <body className="font-body antialiased">
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );
