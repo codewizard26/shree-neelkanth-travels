@@ -26,6 +26,15 @@ export type Package = {
   exclusions: string[];
 };
 
+export type Vehicle = {
+  name: string;
+  type: string;
+  capacity: string;
+  image: string;
+  description: string;
+  features: string[];
+};
+
 export type Review = {
   name: string;
   initials: string;
@@ -36,10 +45,10 @@ export type Review = {
 };
 
 export const contact = {
-  phoneDisplay: "+91 98765 43210",
-  phone: "+919876543210",
-  whatsapp: "919876543210",
-  email: "yatra@shreeneelkanth.com",
+  phoneDisplay: "+91 99197 56791",
+  phone: "+919919756791",
+  whatsapp: "919919756791",
+  email: "neelkanthtourtravels96@gmail.com",
 };
 
 export const destinations: Destination[] = [
@@ -58,18 +67,18 @@ export const destinations: Destination[] = [
     days: "2–3 Days",
   },
   {
-    name: "Nawabganj Bird Sanctuary",
-    tagline: "Migratory birds beside a tranquil lake",
+    name: "Chitrakoot",
+    tagline: "Ramghat, Kamadgiri & the Mandakini river",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/b/bf/Nawabganj_Bird_Sanctuary%2C_Unnao_03.JPG",
-    days: "Day Trip",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ramghat_at_chitrakoot.jpg/1280px-Ramghat_at_chitrakoot.jpg",
+    days: "2 Days",
   },
   {
-    name: "Katarniyaghat",
-    tagline: "Tiger, gharial and the wild Terai forests",
+    name: "Vindhyachal",
+    tagline: "Maa Vindhyavasini Shakti Peeth & Trikon Parikrama",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Katarniaghat.jpg/1920px-Katarniaghat.jpg",
-    days: "2–4 Days",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Painting_of_Vindhyavaasini_Devi.jpg",
+    days: "Day Trip",
   },
 ];
 
@@ -79,7 +88,7 @@ export const packages: Package[] = [
     title: "Ayodhya Darshan",
     subtitle: "Ram Mandir & Saryu Aarti",
     duration: "2 Days · 1 Night",
-    price: "₹4,500",
+    price: "₹3,500",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg/1280px-Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg",
     highlights: [
@@ -226,106 +235,163 @@ export const packages: Package[] = [
     ],
   },
   {
-    slug: "nawabganj-bird-sanctuary",
-    title: "Nawabganj Bird Sanctuary",
-    subtitle: "Lakeside birding day trip",
-    duration: "Day Trip",
-    price: "₹1,800",
-    badge: "Day Trip",
+    slug: "chitrakoot-darshan",
+    title: "Chitrakoot Darshan",
+    subtitle: "Ramghat, Kamadgiri & Mandakini",
+    duration: "2 Days · 1 Night",
+    price: "₹3,500",
+    badge: "New",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/b/bf/Nawabganj_Bird_Sanctuary%2C_Unnao_03.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ramghat_at_chitrakoot.jpg/1280px-Ramghat_at_chitrakoot.jpg",
     highlights: [
-      "Migratory & resident bird watching",
-      "Guided lakeside nature walk",
-      "Boating where available",
-      "Ideal for families & student groups",
+      "Boat ride & evening aarti at Ramghat on the Mandakini",
+      "Kamadgiri Parikrama darshan",
+      "Hanuman Dhara & Gupt Godavari caves",
+      "Sati Anusuya ashram & Bharat Milap temple",
     ],
     overview:
-      "An easy day escape from Lucknow to the Nawabganj (Chandrshekhar Azad) Bird Sanctuary. Spot migratory and resident species around the lake with a naturalist guide — perfect for families and student groups.",
+      "Chitrakoot — where Lord Ram, Sita and Lakshman spent the early years of their forest exile. A serene two-day pilgrimage along the Mandakini, covering Ramghat, the sacred Kamadgiri hill, and the caves and ashrams that dot this timeless landscape.",
     itinerary: [
-      { day: "Morning", title: "Departure & birding", detail: "Pickup from Lucknow, drive to the sanctuary. Guided nature walk and bird watching around the lake." },
-      { day: "Afternoon", title: "Boating & return", detail: "Optional boating, packed lunch by the lake, then return to Lucknow by evening." },
+      { day: "Day 1", title: "Arrival & Ramghat", detail: "Arrival and hotel check-in. Boat ride on the Mandakini at Ramghat and evening aarti. Visit the Bharat Milap temple." },
+      { day: "Day 2", title: "Kamadgiri & caves", detail: "Morning Kamadgiri Parikrama, then Hanuman Dhara, Gupt Godavari and the Sati Anusuya ashram, followed by departure." },
     ],
     inclusions: [
-      "AC vehicle from Lucknow & back",
-      "Naturalist guide",
-      "Sanctuary entry assistance",
-      "Driver & parking charges",
+      "1 night hotel accommodation",
+      "Daily breakfast",
+      "AC vehicle for sightseeing",
+      "Local guide for the temple circuit",
+      "All toll, parking & driver charges",
+    ],
+    exclusions: [
+      "Lunch & personal expenses",
+      "Boat ride & special aarti charges",
+      "Anything not mentioned in inclusions",
+    ],
+  },
+  {
+    slug: "vindhyachal-darshan",
+    title: "Vindhyachal Darshan",
+    subtitle: "Maa Vindhyavasini & Trikon Parikrama",
+    duration: "Day Trip",
+    price: "₹2,500",
+    badge: "Day Trip",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Painting_of_Vindhyavaasini_Devi.jpg",
+    highlights: [
+      "Maa Vindhyavasini Shakti Peeth darshan",
+      "Trikon Parikrama — Kali Khoh & Ashtabhuja",
+      "Ganga snan at the Vindhyachal ghat",
+      "Perfect add-on to a Kashi trip",
+    ],
+    overview:
+      "Vindhyachal, on the banks of the Ganga in Mirzapur, is one of the most revered Shakti Peeths in India. Seek the blessings of Maa Vindhyavasini and complete the sacred Trikon Parikrama covering the Kali Khoh and Ashtabhuja temples — an easy day trip, ideal alongside a Kashi visit.",
+    itinerary: [
+      { day: "Morning", title: "Darshan & Ganga snan", detail: "Pickup and drive to Vindhyachal. Maa Vindhyavasini darshan and a holy dip at the Ganga ghat." },
+      { day: "Afternoon", title: "Trikon Parikrama", detail: "Complete the Trikon Parikrama via the Kali Khoh and Ashtabhuja temples, then return." },
+    ],
+    inclusions: [
+      "AC vehicle for the day",
+      "Local guide assistance",
+      "Darshan coordination",
+      "All toll, parking & driver charges",
     ],
     exclusions: [
       "Meals & personal expenses",
-      "Boating / camera fees",
+      "VIP darshan / special pooja charges",
       "Anything not mentioned in inclusions",
     ],
   },
+];
+
+export const vehicles: Vehicle[] = [
   {
-    slug: "katarniyaghat-safari",
-    title: "Explore Katarniyaghat",
-    subtitle: "3 jungle safaris in the Terai",
-    duration: "3 Days · 2 Nights · 3 Safaris",
-    price: "₹14,500",
-    badge: "Wildlife",
+    name: "Hatchback",
+    type: "Maruti Swift / WagonR",
+    capacity: "4 seater",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Katarniaghat.jpg/1920px-Katarniaghat.jpg",
-    highlights: [
-      "Three guided jeep safaris",
-      "Tiger, gharial & Gangetic dolphin habitat",
-      "Forest rest-house / eco-lodge stay",
-      "Girwa river boat ride",
-    ],
-    overview:
-      "Venture into Katarniyaghat, part of the Dudhwa Tiger Reserve — a rich Terai wilderness of tigers, gharials, swamp deer and the rare Gangetic dolphin. Three safaris and a Girwa river boat ride across two relaxed nights.",
-    itinerary: [
-      { day: "Day 1", title: "Arrival & evening safari", detail: "Arrival and eco-lodge check-in. Afternoon jeep safari into the core zone." },
-      { day: "Day 2", title: "Two safaris & river", detail: "Early morning safari, Girwa river boat ride for gharials & dolphins, evening safari." },
-      { day: "Day 3", title: "Departure", detail: "Morning at leisure, then departure." },
-    ],
-    inclusions: [
-      "2 nights eco-lodge / rest-house stay",
-      "All meals (breakfast, lunch, dinner)",
-      "3 shared jeep safaris with guide",
-      "Girwa river boat ride",
-      "AC transport to & from the reserve",
-    ],
-    exclusions: [
-      "Safari & camera permit fees",
-      "Personal expenses",
-      "Anything not mentioned in inclusions",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Maruti_Suzuki_Swift_2092.JPG/1280px-Maruti_Suzuki_Swift_2092.JPG",
+    description:
+      "Budget-friendly small cars for couples and solo travellers. ",
+    features: [
+      "Starting at 10Rs/km",
+      "AC · comfortable city ride",
+      "Perfect for 1–4 travellers",
+      "Toll, Parking, Night Charges excluded",
     ],
   },
   {
-    slug: "track-tiger-katarniyaghat",
-    title: "Track Tiger at Katarniyaghat",
-    subtitle: "6 safaris for the serious wildlife lover",
-    duration: "4 Days · 3 Nights · 6 Safaris",
-    price: "₹22,000",
+    name: "Sedan",
+    type: "Dzire / Hundai Aura ",
+    capacity: "5 seater",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Bengal_tiger_in_Sanjay_Dubri_Tiger_Reserve_December_2024_by_Tisha_Mukherjee_11.jpg/1920px-Bengal_tiger_in_Sanjay_Dubri_Tiger_Reserve_December_2024_by_Tisha_Mukherjee_11.jpg",
-    highlights: [
-      "Six guided jeep safaris",
-      "Best odds for a tiger sighting",
-      "Naturalist-led birding sessions",
-      "Girwa river dolphin & gharial boat ride",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Maruti_Suzuki_Dzire_VXi_VVT.JPG/1280px-Maruti_Suzuki_Dzire_VXi_VVT.JPG",
+    description:
+      "Extra comfort and boot space for outstation trips. ",
+    features: [
+      "Starting at 12Rs/km",
+      "AC · spacious legroom",
+      "Large boot for luggage",
+      "Toll, Parking, Night Charges excluded",
     ],
-    overview:
-      "Our most immersive wilderness package — six safaris across three nights for the best chance of tracking a tiger at Katarniyaghat. Built for keen wildlife and photography enthusiasts, with a dedicated naturalist throughout.",
-    itinerary: [
-      { day: "Day 1", title: "Arrival & evening safari", detail: "Eco-lodge check-in and an afternoon safari to settle into the forest." },
-      { day: "Day 2", title: "Two safaris", detail: "Morning and evening safaris with a naturalist; midday birding session." },
-      { day: "Day 3", title: "Safaris & river", detail: "Morning safari, Girwa river boat ride, evening safari." },
-      { day: "Day 4", title: "Final safari & departure", detail: "One last morning safari, then departure." },
+  },
+  {
+    name: "SUV",
+    type: "Innova / Ertiga / Kia Currans/ Crysta",
+    capacity: "6–7 seater",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Toyota_Innova_Crysta_2.4_Z_side.jpg/1280px-Toyota_Innova_Crysta_2.4_Z_side.jpg",
+    description:
+      "Spacious, comfortable SUVs for families and small groups — ideal for long temple circuits and hilly routes with luggage space to spare.",
+    features: [
+      "Starting at 14Rs/km",
+      "AC · push-back seats",
+      "Great for hilly & long routes",
+      "Toll, Parking, Night Charges excluded"
     ],
-    inclusions: [
-      "3 nights eco-lodge / rest-house stay",
-      "All meals (breakfast, lunch, dinner)",
-      "6 shared jeep safaris with guide",
-      "Girwa river boat ride",
-      "AC transport to & from the reserve",
+  },
+  {
+    name: "Tempo Traveller",
+    type: "12–26 seater van",
+    capacity: "12–26 seater",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Force_Motors_-_Traveller_26_-_Agra_2014-05-14_4222.JPG/1280px-Force_Motors_-_Traveller_26_-_Agra_2014-05-14_4222.JPG",
+    description:
+      "Roomy group vehicles for large families and pilgrim groups. Travel together in comfort with ample luggage room.",
+    features: [
+      "Starting at 22Rs/km",
+      "Push-back / reclining seats",
+      "Ideal for group yatras",
+      "Toll, Parking, Night Charges excluded"
     ],
-    exclusions: [
-      "Safari & camera permit fees",
-      "Personal expenses",
-      "Anything not mentioned in inclusions",
+  },
+
+  {
+    name: "40 Seater AC/ Non-AC Bus",
+    type: "Luxury/Standard coach",
+    capacity: "40 seater",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Scania_Metrolink_HD_14.5_M_Ashwamedh.jpg/1280px-Scania_Metrolink_HD_14.5_M_Ashwamedh.jpg",
+    description:
+      "Economical non-AC coach for budget group travel. Reliable and roomy for school trips and large yatra groups.",
+    features: [
+      "AC · push-back seats",
+      "Comfortable seating",
+      "Big luggage capacity",
+    ],
+  },
+
+  {
+    name: "50 Seater AC/Non-AC Bus",
+    type: "Large standard coach",
+    capacity: "50 seater",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/WBSTC_Volvo_Bus_Sauhardya-2_-_WB_23_B_9224_-_Petrapole_-_North_24_Parganas_2015-05-29_1324.JPG/1280px-WBSTC_Volvo_Bus_Sauhardya-2_-_WB_23_B_9224_-_Petrapole_-_North_24_Parganas_2015-05-29_1324.JPG",
+    description:
+      "High-capacity Ac/non-AC coach at the most economical rate. Ideal for large yatra groups travelling on a budget.",
+    features: [
+      "Lowest per-seat cost",
+      "50-seat capacity",
+      "Big luggage hold",
     ],
   },
 ];
@@ -352,8 +418,8 @@ export const reviews: Review[] = [
     initials: "MI",
     rating: 5,
     date: "1 month ago",
-    trip: "Explore Katarniyaghat",
-    text: "We saw a tiger on our very first safari! The eco-lodge was comfortable and the Girwa river boat ride for gharials was the highlight. Beautifully organised.",
+    trip: "Chitrakoot Darshan",
+    text: "The Chitrakoot trip was so peaceful. The Ramghat boat ride and evening aarti on the Mandakini were beautiful, and the Kamadgiri parikrama was well arranged. Beautifully organised.",
   },
   {
     name: "Sandeep Kulkarni",
@@ -376,8 +442,8 @@ export const reviews: Review[] = [
     initials: "VS",
     rating: 5,
     date: "3 months ago",
-    trip: "Track Tiger at Katarniyaghat",
-    text: "Booked for a group of eight and everything was seamless. Six safaris, knowledgeable naturalist and clean stays. Five stars well earned.",
+    trip: "Chitrakoot Darshan",
+    text: "Booked for a group of eight and everything was seamless — comfortable stays, clean transport and a coordinator on call throughout. Five stars well earned.",
   },
 ];
 

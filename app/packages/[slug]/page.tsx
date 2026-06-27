@@ -51,7 +51,7 @@ export default function PackageDetail({ params }: { params: { slug: string } }) 
               <Clock size={16} /> {pkg.duration}
             </span>
             <span className="inline-flex items-center gap-2 text-sm">
-              <MapPin size={16} /> Uttar Pradesh
+              <MapPin size={16} /> Starts &amp; ends at Prayagraj
             </span>
             <span className="text-sm">
               <span className="text-cream/60">starting at </span>

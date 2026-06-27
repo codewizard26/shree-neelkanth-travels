@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Packages from "@/components/Packages";
+import Vehicles from "@/components/Vehicles";
 import TrustStrip from "@/components/TrustStrip";
 import Destinations from "@/components/Destinations";
 import Reviews from "@/components/Reviews";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <Navbar />
       <Hero />
+      <Vehicles />
       <Packages />
       <TrustStrip />
       <Destinations />

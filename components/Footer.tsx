@@ -1,5 +1,13 @@
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Logo from "./Logo";
+
+const socials = [
+  {
+    Icon: Instagram,
+    href: "https://www.instagram.com/shrineelkanthtourandtravels?igsh=bWFtNTc0cGo2eHZ6",
+  },
+  { Icon: Facebook, href: "https://www.facebook.com/share/14htkQ38cDM/" },
+];
 
 export default function Footer() {
   return (
@@ -20,7 +28,7 @@ export default function Footer() {
             />
             <FooterCol
               title="Popular Tours"
-              links={["Ayodhya", "Varanasi", "Nawabganj Sanctuary", "Katarniyaghat"]}
+              links={["Ayodhya", "Varanasi", "Chitrakoot", "Lucknow"]}
             />
           </div>
         </div>
@@ -31,10 +39,12 @@ export default function Footer() {
             rights reserved.
           </p>
           <div className="flex gap-3">
-            {[Facebook, Instagram, Youtube].map((Icon, i) => (
+            {socials.map(({ Icon, href }, i) => (
               <a
                 key={i}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-cream/10 transition-colors hover:bg-gold-500 hover:text-ocean-900"
               >
                 <Icon size={16} />

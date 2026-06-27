@@ -54,13 +54,14 @@ const telugu = Noto_Sans_Telugu({
 export const metadata: Metadata = {
   title: "Shree Neelkanth Tour & Travel | Tours across Uttar Pradesh",
   description:
-    "Shree Neelkanth Tour & Travel curates Ayodhya, Varanasi, Lucknow, bird-sanctuary and Katarniyaghat wildlife tour packages across Uttar Pradesh — simple to book, planned end to end.",
+    "Shree Neelkanth Tour & Travel curates Ayodhya, Varanasi, Lucknow, Chitrakoot and Vindhyachal tour packages across Uttar Pradesh — plus SUVs, Tempo Travellers and buses on rent. Simple to book, planned end to end.",
   keywords: [
     "Ayodhya tour package",
     "Varanasi tour",
     "Lucknow Ayodhya tour",
-    "Nawabganj bird sanctuary",
-    "Katarniyaghat tiger safari",
+    "Chitrakoot darshan",
+    "Vindhyachal darshan",
+    "Prayagraj car & bus rental",
   ],
 };
 
@@ -80,3 +81,4 @@ export default function RootLayout({
     </html>
   );
 }
+

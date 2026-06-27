@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 const links = [
+  { label: "Vehicles", href: "/#vehicles" },
   { label: "Packages", href: "/#packages" },
   { label: "Destinations", href: "/#destinations" },
   { label: "Reviews", href: "/#reviews" },

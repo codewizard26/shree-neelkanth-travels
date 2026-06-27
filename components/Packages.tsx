@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Reveal from "./Reveal";
 import { packages } from "@/lib/data";
-import { ArrowRight, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, MapPin, Sparkles } from "lucide-react";
 
 export default function Packages() {
   return (
@@ -50,6 +50,9 @@ export default function Packages() {
                   <p className="mt-1 text-sm text-ink/60">{p.subtitle}</p>
                   <p className="mt-3 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-gold-600">
                     <Clock size={13} /> {p.duration}
+                  </p>
+                  <p className="mt-1.5 inline-flex items-center gap-1.5 text-xs text-ink/55">
+                    <MapPin size={13} /> From Prayagraj
                   </p>
 
                   <div className="my-5 h-px w-full bg-ocean-100" />

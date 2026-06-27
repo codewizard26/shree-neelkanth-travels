@@ -22,28 +22,29 @@ export default function Hero() {
 
       <motion.div variants={container} initial="hidden" animate="show" className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-24">
         <motion.span variants={item} className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-white/90">
-          <MapPin size={13} /> Ayodhya · Kashi · Wildlife
+          <MapPin size={13} /> Packages · Vehicles on Rent
         </motion.span>
 
         <motion.h1 variants={item} className="max-w-3xl font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-          Tours across Uttar Pradesh,
+          Your travel,
           <br />
-          <span className="italic text-gold-400">planned end to end.</span>
+          <span className="italic text-gold-400">made easy.</span>
         </motion.h1>
 
         <motion.p variants={item} className="mt-6 max-w-xl text-lg font-light leading-relaxed text-white/85">
-          From the Ram Mandir in Ayodhya and the ghats of Varanasi to tiger
-          safaris at Katarniyaghat — handpicked packages with hotels, transport
-          and a coordinator handled for you. Pick a package, see the full
-          day-by-day plan, and book over a call or WhatsApp.
+          Rent a car, SUV, Tempo Traveller or a bus — all with a driver — for
+          your own plan. And when you want it all arranged, our curated tour
+          packages cover Ayodhya, Kashi, Chitrakoot and Vindhyachal. Vehicle
+          rentals and tours, both handled end to end. Book over a call or
+          WhatsApp.
         </motion.p>
 
         <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-4">
-          <a href="#packages" className="rounded-full bg-gold-500 px-7 py-3.5 font-semibold text-ocean-900 transition-all hover:bg-gold-400 hover:shadow-xl hover:shadow-gold-500/30">
-            View Packages
+          <a href="#vehicles" className="rounded-full bg-gold-500 px-7 py-3.5 font-semibold text-ocean-900 transition-all hover:bg-gold-400 hover:shadow-xl hover:shadow-gold-500/30">
+            Rent a Vehicle
           </a>
-          <a href="#book" className="rounded-full border border-white/40 px-7 py-3.5 font-medium text-white transition-all hover:bg-white hover:text-ocean-700">
-            Book Now
+          <a href="#packages" className="rounded-full border border-white/40 px-7 py-3.5 font-medium text-white transition-all hover:bg-white hover:text-ocean-700">
+            View Packages
           </a>
         </motion.div>
 

@@ -7,20 +7,21 @@ const details = [
   {
     icon: Phone,
     label: "Call us",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 99197 56791",
+    href: "tel:+919919756791",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "yatra@shreeneelkanth.com",
-    href: "mailto:yatra@shreeneelkanth.com",
+    value: "neelkanthtourtravels96@gmail.com",
+    href: "mailto:neelkanthtourtravels96@gmail.com",
   },
   {
     icon: MapPin,
     label: "Visit",
-    value: "Railway Road, Rishikesh, Uttarakhand 249201",
-    href: "#",
+    value:
+      "Shree Neelkanth Tour & Travels, Nagar Nigam, Allahpur, Prayagraj, Uttar Pradesh 211006",
+    href: "https://www.google.com/maps/place/Shri+Neelkanth+Tour+And+Travels/@25.4482958,81.8713832,17z/data=!3m1!4b1!4m6!3m5!1s0x399ab550dc72ce69:0xb2cf4831c384c8ac!8m2!3d25.4482958!4d81.8713832!16s%2Fg%2F11sbr0p4g5",
   },
 ];
 
@@ -50,6 +51,8 @@ export default function Contact() {
                   <Reveal key={d.label} delay={i * 0.08}>
                     <a
                       href={d.href}
+                      target={d.href.startsWith("http") ? "_blank" : undefined}
+                      rel={d.href.startsWith("http") ? "noreferrer" : undefined}
                       className="group flex items-center gap-4 text-cream/90"
                     >
                       <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-cream/10 transition-colors group-hover:bg-gold-500 group-hover:text-ocean-900">
@@ -67,7 +70,7 @@ export default function Contact() {
               </div>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919919756791"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 font-medium text-ocean-900 transition-all hover:bg-gold-400"
@@ -95,14 +98,18 @@ export default function Contact() {
                 />
                 <div>
                   <label className="mb-1.5 block text-sm font-medium text-ocean-700">
-                    Which journey interests you?
+                    What are you interested in?
                   </label>
                   <select className="w-full rounded-xl border border-ocean-100 bg-white px-4 py-3 text-ink outline-none transition-colors focus:border-gold-400">
                     <option>Ayodhya Darshan</option>
                     <option>Ayodhya – Varanasi</option>
                     <option>Ayodhya – Varanasi – Chandauli</option>
-                    <option>Nawabganj Bird Sanctuary</option>
-                    <option>Katarniyaghat Safari</option>
+                    <option>Chitrakoot Darshan</option>
+                    <option>Vindhyachal Darshan</option>
+                    <option>Vehicle on Rent — Hatchback / Sedan</option>
+                    <option>Vehicle on Rent — SUV</option>
+                    <option>Vehicle on Rent — Tempo Traveller</option>
+                    <option>Vehicle on Rent — 40 / 50 Seater Bus</option>
                     <option>Custom / Not sure yet</option>
                   </select>
                 </div>
