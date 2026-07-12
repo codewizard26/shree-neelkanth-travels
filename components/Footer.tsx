@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
 import Logo from "./Logo";
 
@@ -30,6 +31,21 @@ export default function Footer() {
               title="Popular Tours"
               links={["Ayodhya", "Varanasi", "Chitrakoot", "Lucknow"]}
             />
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-cream">
+                Services
+              </h4>
+              <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link
+                    href="/car-hire-prayagraj"
+                    className="transition-colors hover:text-gold-400"
+                  >
+                    Car Hire in Prayagraj
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

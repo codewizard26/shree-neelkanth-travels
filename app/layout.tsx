@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Space_Grotesk,
   Inter,
@@ -107,11 +107,30 @@ export const metadata: Metadata = {
   },
   category: "travel",
   icons: { icon: "/icon.png", apple: "/icon.png" },
+  manifest: "/manifest.webmanifest",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#102a52",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "TravelAgency",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      description,
+      publisher: { "@id": `${site.url}/#business` },
+      inLanguage: "en-IN",
+    },
+    {
+  "@type": ["TravelAgency", "LocalBusiness"],
+  "@id": `${site.url}/#business`,
   name: site.name,
   description,
   url: site.url,
@@ -164,6 +183,8 @@ const jsonLd = {
     "Uttar Pradesh",
   ],
   sameAs: site.socials,
+    },
+  ],
 };
 
 const faqLd = {

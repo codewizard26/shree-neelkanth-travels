@@ -55,18 +55,40 @@ export default function PackageDetail({ params }: { params: { slug: string } }) 
   const priceValue = pkg.price.replace(/[^\d]/g, "");
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: `${pkg.title} Tour Package`,
-    description: pkg.overview,
-    image: pkg.image,
-    brand: { "@type": "Brand", name: site.name },
-    offers: {
-      "@type": "Offer",
-      price: priceValue || undefined,
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-      url: `${site.url}/packages/${pkg.slug}`,
-    },
+    "@graph": [
+      {
+        "@type": "Product",
+        name: `${pkg.title} Tour Package`,
+        description: pkg.overview,
+        image: pkg.image,
+        brand: { "@type": "Brand", name: site.name },
+        offers: {
+          "@type": "Offer",
+          price: priceValue || undefined,
+          priceCurrency: "INR",
+          availability: "https://schema.org/InStock",
+          url: `${site.url}/packages/${pkg.slug}`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Tour Packages",
+            item: `${site.url}/#packages`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: pkg.title,
+            item: `${site.url}/packages/${pkg.slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -82,7 +104,8 @@ export default function PackageDetail({ params }: { params: { slug: string } }) 
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={pkg.image}
-          alt={pkg.title}
+          alt={`${pkg.title} — ${pkg.subtitle}`}
+          fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/90 via-ocean-900/40 to-ocean-900/30" />

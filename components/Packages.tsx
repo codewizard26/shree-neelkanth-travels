@@ -33,7 +33,9 @@ export default function Packages() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={p.image}
-                    alt={p.title}
+                    alt={`${p.title} tour package — ${p.subtitle}`}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {p.badge && (

@@ -30,7 +30,9 @@ export default function Vehicles() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={v.image}
-                    alt={v.name}
+                    alt={`${v.name} (${v.type}) on rent — Shree Neelkanth, Prayagraj`}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-ocean-700/90 px-3 py-1 text-[0.7rem] font-medium uppercase tracking-wider text-cream">
@@ -79,12 +81,19 @@ export default function Vehicles() {
 
         <Reveal className="mt-12 text-center">
           <p className="text-sm text-ink/60">
-            Prefer a call?{" "}
+            Looking for{" "}
+            <a
+              href="/car-hire-prayagraj"
+              className="font-medium text-ocean-700 underline decoration-gold-400 underline-offset-4 hover:text-gold-600"
+            >
+              car hire in Prayagraj
+            </a>
+            ? See rates &amp; routes, or{" "}
             <a
               href="#book"
               className="font-medium text-ocean-700 underline decoration-gold-400 underline-offset-4 hover:text-gold-600"
             >
-              Send us an enquiry
+              send us an enquiry
             </a>{" "}
             and we&rsquo;ll get back to you.
           </p>
