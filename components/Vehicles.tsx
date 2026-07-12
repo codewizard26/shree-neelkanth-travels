@@ -17,7 +17,7 @@ export default function Vehicles() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg font-light text-ink/70">
             Travelling on your own plan? Choose from SUVs, Tempo Travellers and
-            small cars — all with an experienced driver. Raise a query and
+            small cars — all with an experienced driver. Book now and
             we&rsquo;ll share the best rate.
           </p>
         </Reveal>
@@ -69,7 +69,7 @@ export default function Vehicles() {
                     rel="noreferrer"
                     className="mt-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-ocean-600 px-5 py-3 text-sm font-medium text-cream transition-all group-hover:bg-gold-500 group-hover:text-ocean-900"
                   >
-                    <MessageCircle size={16} /> Raise a Query
+                    <MessageCircle size={16} /> Book Now
                   </a>
                 </div>
               </div>

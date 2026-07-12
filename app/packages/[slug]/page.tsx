@@ -1,12 +1,47 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check, Clock, MapPin, Phone, MessageCircle, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { packages, contact } from "@/lib/data";
+import { packages, contact, site } from "@/lib/data";
 
 export function generateStaticParams() {
   return packages.map((p) => ({ slug: p.slug }));
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const pkg = packages.find((p) => p.slug === params.slug);
+  if (!pkg) return { title: "Package not found" };
+
+  const desc = `${pkg.subtitle} — ${pkg.duration}, starting at ${pkg.price} per person. ${pkg.overview}`.slice(
+    0,
+    160
+  );
+  const url = `${site.url}/packages/${pkg.slug}`;
+
+  return {
+    title: `${pkg.title} Tour Package`,
+    description: desc,
+    alternates: { canonical: `/packages/${pkg.slug}` },
+    openGraph: {
+      type: "article",
+      url,
+      title: `${pkg.title} Tour Package`,
+      description: desc,
+      images: [{ url: pkg.image, width: 1200, height: 630, alt: pkg.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${pkg.title} Tour Package`,
+      description: desc,
+      images: [pkg.image],
+    },
+  };
 }
 
 export default function PackageDetail({ params }: { params: { slug: string } }) {
@@ -17,8 +52,29 @@ export default function PackageDetail({ params }: { params: { slug: string } }) 
     `Hi! I'm interested in the "${pkg.title}" package (${pkg.duration}). Please share more details.`
   );
 
+  const priceValue = pkg.price.replace(/[^\d]/g, "");
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${pkg.title} Tour Package`,
+    description: pkg.overview,
+    image: pkg.image,
+    brand: { "@type": "Brand", name: site.name },
+    offers: {
+      "@type": "Offer",
+      price: priceValue || undefined,
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      url: `${site.url}/packages/${pkg.slug}`,
+    },
+  };
+
   return (
     <main className="overflow-x-hidden bg-cream">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero */}

@@ -51,6 +51,24 @@ export const contact = {
   email: "neelkanthtourtravels96@gmail.com",
 };
 
+// SEO / site config. Change `url` to your real domain once live.
+export const site = {
+  name: "Shree Neelkanth Tour & Travel",
+  shortName: "Shree Neelkanth",
+  url: "https://www.shrineelkanthtravels.com",
+  ogImage: "/logo.png",
+  locality: "Prayagraj",
+  region: "Uttar Pradesh",
+  country: "IN",
+  geo: { lat: 25.4482958, lng: 81.8713832 },
+  maps:
+    "https://www.google.com/maps/place/Shri+Neelkanth+Tour+And+Travels/@25.4482958,81.8713832,17z",
+  socials: [
+    "https://www.instagram.com/shrineelkanthtourandtravels",
+    "https://www.facebook.com/share/14htkQ38cDM/",
+  ],
+};
+
 export const destinations: Destination[] = [
   {
     name: "Ayodhya",
