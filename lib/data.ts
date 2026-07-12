@@ -102,157 +102,6 @@ export const destinations: Destination[] = [
 
 export const packages: Package[] = [
   {
-    slug: "ayodhya-darshan",
-    title: "Ayodhya Darshan",
-    subtitle: "Ram Mandir & Saryu Aarti",
-    duration: "2 Days · 1 Night",
-    price: "₹3,500",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg/1280px-Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg",
-    highlights: [
-      "Ram Janmabhoomi & Hanuman Garhi darshan",
-      "Evening Saryu aarti at Ram ki Paidi",
-      "Comfortable AC transport & hotel stay",
-      "Local guide for the temple circuit",
-    ],
-    overview:
-      "A compact yet complete pilgrimage to Ayodhya — the birthplace of Lord Ram. Visit the Ram Mandir, Hanuman Garhi and the sacred Saryu ghats with comfortable stays and a local guide to handle every detail.",
-    itinerary: [
-      {
-        day: "Day 1",
-        title: "Arrival & Ayodhya darshan",
-        detail:
-          "Arrival and hotel check-in. Afternoon darshan at Ram Janmabhoomi and Hanuman Garhi. Evening Saryu aarti at Ram ki Paidi.",
-      },
-      {
-        day: "Day 2",
-        title: "Kanak Bhawan & departure",
-        detail:
-          "Morning visit to Kanak Bhawan and Nageshwarnath Temple, then departure with blessings.",
-      },
-    ],
-    inclusions: [
-      "1 night hotel accommodation",
-      "Daily breakfast",
-      "AC vehicle for sightseeing",
-      "Local guide for temple circuit",
-      "All toll, parking & driver charges",
-    ],
-    exclusions: [
-      "Lunch & personal expenses",
-      "VIP darshan / special pooja charges",
-      "Anything not mentioned in inclusions",
-    ],
-  },
-  {
-    slug: "lucknow-ayodhya-lucknow",
-    title: "Lucknow – Ayodhya – Lucknow",
-    subtitle: "Nawabi city & Ram Nagari",
-    duration: "3 Days · 2 Nights",
-    price: "₹7,900",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Bara_Imambara%2C_Lucknow_2.jpg/1920px-Bara_Imambara%2C_Lucknow_2.jpg",
-    highlights: [
-      "Lucknow heritage — Bara Imambara & Hazratganj",
-      "Full-day Ayodhya temple darshan",
-      "Awadhi cuisine experience",
-      "Comfortable AC transport throughout",
-    ],
-    overview:
-      "Pair the Nawabi charm of Lucknow with a soulful Ayodhya darshan. Explore the Bara Imambara and bustling Hazratganj, then journey to Ram Nagari for a peaceful temple circuit.",
-    itinerary: [
-      { day: "Day 1", title: "Lucknow sightseeing", detail: "Arrival in Lucknow, visit Bara Imambara, Rumi Darwaza and Hazratganj. Evening Awadhi dinner." },
-      { day: "Day 2", title: "Lucknow → Ayodhya", detail: "Drive to Ayodhya. Ram Janmabhoomi and Hanuman Garhi darshan, evening Saryu aarti." },
-      { day: "Day 3", title: "Ayodhya → Lucknow", detail: "Morning Kanak Bhawan visit, drive back to Lucknow for departure." },
-    ],
-    inclusions: [
-      "2 nights hotel accommodation",
-      "Daily breakfast",
-      "AC vehicle for the full circuit",
-      "Local guide in Lucknow & Ayodhya",
-      "All toll, parking & driver charges",
-    ],
-    exclusions: [
-      "Lunch & dinner (except where noted)",
-      "Monument entry fees",
-      "Personal expenses",
-      "Anything not mentioned in inclusions",
-    ],
-  },
-  {
-    slug: "ayodhya-varanasi",
-    title: "Ayodhya – Varanasi",
-    subtitle: "Ram Nagari to the ghats of Kashi",
-    duration: "3 Days · 2 Nights",
-    price: "₹9,500",
-    badge: "Most Loved",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dasaswamedh_ghat-varanasi_india-andres_larin.jpg/1920px-Dasaswamedh_ghat-varanasi_india-andres_larin.jpg",
-    highlights: [
-      "Ayodhya Ram Mandir darshan",
-      "Kashi Vishwanath & Ganga aarti at Dashashwamedh",
-      "Sunrise boat ride on the Ganga",
-      "Sarnath excursion",
-    ],
-    overview:
-      "Two of India's holiest cities in one seamless journey. Begin with Ayodhya's Ram Mandir, then immerse in the timeless ghats of Varanasi — the Ganga aarti, a sunrise boat ride and the calm of Sarnath.",
-    itinerary: [
-      { day: "Day 1", title: "Ayodhya darshan", detail: "Arrival in Ayodhya. Ram Janmabhoomi and Hanuman Garhi darshan, evening Saryu aarti." },
-      { day: "Day 2", title: "Ayodhya → Varanasi", detail: "Drive to Varanasi. Evening Ganga aarti at Dashashwamedh Ghat." },
-      { day: "Day 3", title: "Kashi & Sarnath", detail: "Sunrise boat ride, Kashi Vishwanath darshan, afternoon Sarnath excursion, then departure." },
-    ],
-    inclusions: [
-      "2 nights hotel accommodation",
-      "Daily breakfast",
-      "AC vehicle for the full circuit",
-      "Sunrise boat ride in Varanasi",
-      "Local guide at each city",
-    ],
-    exclusions: [
-      "Lunch & dinner",
-      "VIP darshan / special pooja charges",
-      "Personal expenses",
-      "Anything not mentioned in inclusions",
-    ],
-  },
-  {
-    slug: "ayodhya-varanasi-chandauli",
-    title: "Ayodhya – Varanasi – Chandauli",
-    subtitle: "Temples, ghats & the Devdari falls",
-    duration: "5 Days · 4 Nights",
-    price: "₹16,800",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Devdari_Water_fall_in_Chandra_prabha.jpg/1920px-Devdari_Water_fall_in_Chandra_prabha.jpg",
-    highlights: [
-      "Ayodhya & Varanasi full circuit",
-      "Chandauli — Devdari & Rajdari waterfalls",
-      "Chandraprabha Wildlife Sanctuary",
-      "Ganga aarti & sunrise boat ride",
-    ],
-    overview:
-      "An extended spiritual-and-nature circuit. Cover the temples of Ayodhya, the ghats of Varanasi, and venture into Chandauli for its dramatic Devdari and Rajdari waterfalls and the Chandraprabha sanctuary.",
-    itinerary: [
-      { day: "Day 1", title: "Ayodhya darshan", detail: "Arrival in Ayodhya. Ram Mandir darshan and evening Saryu aarti." },
-      { day: "Day 2", title: "Ayodhya → Varanasi", detail: "Drive to Varanasi. Evening Ganga aarti at Dashashwamedh Ghat." },
-      { day: "Day 3", title: "Kashi & Sarnath", detail: "Sunrise boat ride, Kashi Vishwanath darshan and Sarnath excursion." },
-      { day: "Day 4", title: "Varanasi → Chandauli", detail: "Drive to Chandauli. Visit Devdari & Rajdari waterfalls and Chandraprabha Wildlife Sanctuary." },
-      { day: "Day 5", title: "Departure", detail: "Morning at leisure, then return journey and departure." },
-    ],
-    inclusions: [
-      "4 nights hotel accommodation",
-      "Daily breakfast & dinner",
-      "AC vehicle for the full circuit",
-      "Sunrise boat ride in Varanasi",
-      "Local guides & all driver charges",
-    ],
-    exclusions: [
-      "Lunch & personal expenses",
-      "Sanctuary entry / safari fees",
-      "VIP darshan charges",
-      "Anything not mentioned in inclusions",
-    ],
-  },
-  {
     slug: "chitrakoot-darshan",
     title: "Chitrakoot Darshan",
     subtitle: "Ramghat, Kamadgiri & Mandakini",
@@ -271,7 +120,7 @@ export const packages: Package[] = [
       "Chitrakoot — where Lord Ram, Sita and Lakshman spent the early years of their forest exile. A serene two-day pilgrimage along the Mandakini, covering Ramghat, the sacred Kamadgiri hill, and the caves and ashrams that dot this timeless landscape.",
     itinerary: [
       { day: "Day 1", title: "Arrival & Ramghat", detail: "Arrival and hotel check-in. Boat ride on the Mandakini at Ramghat and evening aarti. Visit the Bharat Milap temple." },
-      { day: "Day 2", title: "Kamadgiri & caves", detail: "Morning Kamadgiri Parikrama, then Hanuman Dhara, Gupt Godavari and the Sati Anusuya ashram, followed by departure." },
+      { day: "Day 2", title: "Kamadgiri, caves & Gadhwa ka Kila", detail: "Morning Kamadgiri Parikrama, then Hanuman Dhara, Gupt Godavari and the Sati Anusuya ashram. Visit Gadhwa ka Kila before departure." },
     ],
     inclusions: [
       "1 night hotel accommodation",
@@ -315,6 +164,152 @@ export const packages: Package[] = [
     ],
     exclusions: [
       "Meals & personal expenses",
+      "VIP darshan / special pooja charges",
+      "Anything not mentioned in inclusions",
+    ],
+  },
+  {
+    slug: "rural-prayagraj-city-tour",
+    title: "Rural Prayagraj City Tour",
+    subtitle: "Someshwar Mahadev, Shringverpur & Mankameshwar",
+    duration: "Day Trip",
+    price: "₹2,000",
+    badge: "Day Trip",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Prayagraj_Sangam_2.jpg/1280px-Prayagraj_Sangam_2.jpg",
+    highlights: [
+      "Someshwar Mahadev temple darshan",
+      "Shringverpur Dham — Nishadraj & Ram Chaura",
+      "Mankameshwar Mahadev on the Yamuna bank",
+      "Local Prayagraj city sightseeing",
+    ],
+    overview:
+      "A relaxed day around Prayagraj's rural and riverside heritage. Seek blessings at the ancient Someshwar Mahadev, walk the sacred ground of Shringverpur where Lord Ram crossed the Ganga with Nishadraj, and visit the revered Mankameshwar Mahadev by the Yamuna — rounded off with local city sightseeing.",
+    itinerary: [
+      { day: "Morning", title: "Someshwar Mahadev & Shringverpur", detail: "Pickup and drive to Someshwar Mahadev for darshan, then on to Shringverpur Dham — the Nishadraj temple and Ram Chaura ghat on the Ganga." },
+      { day: "Afternoon", title: "Mankameshwar & city sightseeing", detail: "Return via Mankameshwar Mahadev on the bank of the Yamuna, followed by local Prayagraj city sightseeing before drop-off." },
+    ],
+    inclusions: [
+      "AC vehicle for the day",
+      "Local guide assistance",
+      "Darshan coordination",
+      "All toll, parking & driver charges",
+    ],
+    exclusions: [
+      "Meals & personal expenses",
+      "VIP darshan / special pooja charges",
+      "Anything not mentioned in inclusions",
+    ],
+  },
+  {
+    slug: "ayodhya-darshan",
+    title: "Ayodhya Darshan",
+    subtitle: "Ram Mandir & Saryu Aarti",
+    duration: "2 Days · 1 Night",
+    price: "₹3,500",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg/1280px-Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg",
+    highlights: [
+      "Ram Janmabhoomi & Hanuman Garhi darshan",
+      "Evening Saryu aarti at Ram ki Paidi",
+      "Comfortable AC transport & hotel stay",
+      "Local guide for the temple circuit",
+    ],
+    overview:
+      "A compact yet complete pilgrimage to Ayodhya — the birthplace of Lord Ram. Visit the Ram Mandir, Hanuman Garhi and the sacred Saryu ghats with comfortable stays and a local guide to handle every detail.",
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival & Ayodhya darshan",
+        detail:
+          "Arrival and hotel check-in. Afternoon darshan at Ram Janmabhoomi and Hanuman Garhi. Evening Saryu aarti at Ram ki Paidi.",
+      },
+      {
+        day: "Day 2",
+        title: "Kanak Bhawan & departure",
+        detail:
+          "Morning visit to Kanak Bhawan and Nageshwarnath Temple, then departure with blessings.",
+      },
+    ],
+    inclusions: [
+      "1 night hotel accommodation",
+      "Daily breakfast",
+      "AC vehicle for sightseeing",
+      "Local guide for temple circuit",
+      "All toll, parking & driver charges",
+    ],
+    exclusions: [
+      "Lunch & personal expenses",
+      "VIP darshan / special pooja charges",
+      "Anything not mentioned in inclusions",
+    ],
+  },
+  {
+    slug: "ayodhya-varanasi",
+    title: "Prayagraj – Ayodhya – Varanasi",
+    subtitle: "Triveni Sangam, Ram Nagari & the ghats of Kashi",
+    duration: "3 Days · 2 Nights",
+    price: "₹9,500",
+    badge: "Most Loved",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dasaswamedh_ghat-varanasi_india-andres_larin.jpg/1920px-Dasaswamedh_ghat-varanasi_india-andres_larin.jpg",
+    highlights: [
+      "Triveni Sangam darshan at Prayagraj",
+      "Ayodhya Ram Mandir darshan",
+      "Kashi Vishwanath & Ganga aarti at Dashashwamedh",
+      "Sunrise boat ride on the Ganga",
+      "Sarnath excursion",
+    ],
+    overview:
+      "Three of the region's holiest cities in one seamless journey. Begin at Prayagraj's Triveni Sangam, continue to Ayodhya's Ram Mandir, then immerse in the timeless ghats of Varanasi — the Ganga aarti, a sunrise boat ride and the calm of Sarnath.",
+    itinerary: [
+      { day: "Day 1", title: "Prayagraj & Ayodhya", detail: "Arrival at Prayagraj — Triveni Sangam darshan. Drive to Ayodhya for Ram Janmabhoomi and Hanuman Garhi darshan, evening Saryu aarti." },
+      { day: "Day 2", title: "Ayodhya → Varanasi", detail: "Drive to Varanasi. Evening Ganga aarti at Dashashwamedh Ghat." },
+      { day: "Day 3", title: "Kashi & Sarnath", detail: "Sunrise boat ride, Kashi Vishwanath darshan, afternoon Sarnath excursion, then departure." },
+    ],
+    inclusions: [
+      "2 nights hotel accommodation",
+      "Daily breakfast",
+      "AC vehicle for the full circuit",
+      "Sunrise boat ride in Varanasi",
+      "Local guide at each city",
+    ],
+    exclusions: [
+      "Lunch & dinner",
+      "VIP darshan / special pooja charges",
+      "Personal expenses",
+      "Anything not mentioned in inclusions",
+    ],
+  },
+  {
+    slug: "varanasi-darshan",
+    title: "Varanasi Darshan",
+    subtitle: "Kashi Vishwanath, Ganga aarti & Sarnath",
+    duration: "2 Days · 1 Night",
+    price: "₹4,500",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dasaswamedh_ghat-varanasi_india-andres_larin.jpg/1920px-Dasaswamedh_ghat-varanasi_india-andres_larin.jpg",
+    highlights: [
+      "Kashi Vishwanath temple darshan",
+      "Evening Ganga aarti at Dashashwamedh Ghat",
+      "Sunrise boat ride on the Ganga",
+      "Sarnath excursion",
+    ],
+    overview:
+      "Kashi — the eternal city on the banks of the Ganga. A soulful two-day darshan covering the Kashi Vishwanath temple, the grand evening Ganga aarti, a sunrise boat ride along the ghats and the serene Buddhist site of Sarnath.",
+    itinerary: [
+      { day: "Day 1", title: "Arrival & Ganga aarti", detail: "Arrival in Varanasi and hotel check-in. Evening Ganga aarti at Dashashwamedh Ghat." },
+      { day: "Day 2", title: "Kashi & Sarnath", detail: "Sunrise boat ride on the Ganga, Kashi Vishwanath darshan, afternoon Sarnath excursion, then departure." },
+    ],
+    inclusions: [
+      "1 night hotel accommodation",
+      "Daily breakfast",
+      "AC vehicle for sightseeing",
+      "Sunrise boat ride in Varanasi",
+      "Local guide for the temple circuit",
+    ],
+    exclusions: [
+      "Lunch & personal expenses",
       "VIP darshan / special pooja charges",
       "Anything not mentioned in inclusions",
     ],
