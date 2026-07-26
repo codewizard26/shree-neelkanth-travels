@@ -3,38 +3,30 @@ import { Check, Phone, MessageCircle, MapPin, Star, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
-import { vehicles, contact, site, reviews } from "@/lib/data";
+import { vehicles, contact, site, reviews, imageSize } from "@/lib/data";
 
 const HERO_IMG =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Boats_at_sunrise_Ganges_River_Varanasi_Uttar_Pradesh_Schwiki.jpg/1920px-Boats_at_sunrise_Ganges_River_Varanasi_Uttar_Pradesh_Schwiki.jpg";
 
 const title = "Car Hire in Prayagraj — Taxi, Cab & Tempo Traveller on Rent";
+// Keep under 160 characters — longer descriptions get truncated in search results.
 const description =
-  "Reliable car hire in Prayagraj (Allahabad) with experienced drivers. Book a hatchback, sedan, SUV, Innova Crysta or Tempo Traveller on rent for local trips, outstation tours and Ayodhya–Varanasi darshan. Transparent per-km rates, 24x7 booking.";
+  "Hire a hatchback, sedan, SUV, Innova or Tempo Traveller in Prayagraj, with driver. Local trips, outstation tours and Ayodhya–Varanasi darshan. 24x7 booking.";
+
+const og = vehicles[2]
+  ? { url: vehicles[2].image, ...imageSize(vehicles[2].image) }
+  : { url: site.ogImage, width: site.ogImageWidth, height: site.ogImageHeight };
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: [
-    "car hire in Prayagraj",
-    "car rental Prayagraj",
-    "taxi in Prayagraj",
-    "cab booking Prayagraj",
-    "Prayagraj to Ayodhya taxi",
-    "Tempo Traveller on rent Prayagraj",
-    "Innova on rent Prayagraj",
-    "Allahabad car rental",
-    "outstation cab Prayagraj",
-  ],
   alternates: { canonical: "/car-hire-prayagraj" },
   openGraph: {
     type: "website",
     url: `${site.url}/car-hire-prayagraj`,
     title,
     description,
-    images: [
-      { url: vehicles[2]?.image ?? site.ogImage, width: 1200, height: 630, alt: title },
-    ],
+    images: [{ ...og, alt: title }],
   },
   twitter: { card: "summary_large_image", title, description },
 };
@@ -167,6 +159,9 @@ export default function CarHirePrayagraj() {
 
       {/* Hero — matches landing page */}
       <section className="relative flex min-h-[78vh] items-center overflow-hidden">
+        {/* LCP element — a CSS background is only discovered after the stylesheet
+            parses, so preload it up front. */}
+        <link rel="preload" as="image" href={HERO_IMG} fetchPriority="high" />
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 scale-105 bg-cover bg-center"
@@ -258,6 +253,8 @@ export default function CarHirePrayagraj() {
                     <img
                       src={v.image}
                       alt={`${v.name} (${v.type}) on rent in Prayagraj`}
+                      width={imageSize(v.image).width}
+                      height={imageSize(v.image).height}
                       loading="lazy"
                       decoding="async"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

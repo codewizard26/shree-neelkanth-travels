@@ -7,13 +7,19 @@ import { ratingSummary } from "@/lib/data";
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.13, delayChildren: 0.15 } } };
 const item = { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } };
 
+const HERO_IMG =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Boats_at_sunrise_Ganges_River_Varanasi_Uttar_Pradesh_Schwiki.jpg/1920px-Boats_at_sunrise_Ganges_River_Varanasi_Uttar_Pradesh_Schwiki.jpg";
+
 export default function Hero() {
   return (
     <section id="home" className="relative flex min-h-[82vh] items-center overflow-hidden">
+      {/* LCP element — a CSS background is only discovered after the stylesheet
+          parses, so preload it up front. */}
+      <link rel="preload" as="image" href={HERO_IMG} fetchPriority="high" />
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 scale-105 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Boats_at_sunrise_Ganges_River_Varanasi_Uttar_Pradesh_Schwiki.jpg/1920px-Boats_at_sunrise_Ganges_River_Varanasi_Uttar_Pradesh_Schwiki.jpg')" }}
+          style={{ backgroundImage: `url('${HERO_IMG}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ocean-900/90 via-ocean-800/70 to-ocean-600/30" />
       </div>

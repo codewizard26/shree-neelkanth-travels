@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="/">
-          <Logo light={!scrolled} />
+          <Logo light={!scrolled} eager />
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

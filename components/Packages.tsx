@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Reveal from "./Reveal";
-import { packages } from "@/lib/data";
+import { packages, imageSize } from "@/lib/data";
 import { ArrowRight, Clock, MapPin, Sparkles } from "lucide-react";
 
 export default function Packages() {
@@ -34,6 +34,8 @@ export default function Packages() {
                   <img
                     src={p.image}
                     alt={`${p.title} tour package — ${p.subtitle}`}
+                    width={imageSize(p.image).width}
+                    height={imageSize(p.image).height}
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

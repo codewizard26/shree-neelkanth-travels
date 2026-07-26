@@ -4,10 +4,16 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Check, Clock, MapPin, Phone, MessageCircle, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { packages, contact, site } from "@/lib/data";
+import { packages, contact, site, imageSize } from "@/lib/data";
 
 export function generateStaticParams() {
   return packages.map((p) => ({ slug: p.slug }));
+}
+
+function clamp(text: string, max: number) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[.,—–-]$/, "")}…`;
 }
 
 export function generateMetadata({
@@ -18,8 +24,10 @@ export function generateMetadata({
   const pkg = packages.find((p) => p.slug === params.slug);
   if (!pkg) return { title: "Package not found" };
 
-  const desc = `${pkg.subtitle} — ${pkg.duration}, starting at ${pkg.price} per person. ${pkg.overview}`.slice(
-    0,
+  // Trim to 160 characters on a word boundary — a hard slice leaves a
+  // half-word dangling in the search result snippet.
+  const desc = clamp(
+    `${pkg.subtitle} — ${pkg.duration}, starting at ${pkg.price} per person. ${pkg.overview}`,
     160
   );
   const url = `${site.url}/packages/${pkg.slug}`;
@@ -33,7 +41,7 @@ export function generateMetadata({
       url,
       title: `${pkg.title} Tour Package`,
       description: desc,
-      images: [{ url: pkg.image, width: 1200, height: 630, alt: pkg.title }],
+      images: [{ url: pkg.image, ...imageSize(pkg.image), alt: pkg.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -105,6 +113,10 @@ export default function PackageDetail({ params }: { params: { slug: string } }) 
         <img
           src={pkg.image}
           alt={`${pkg.title} — ${pkg.subtitle}`}
+          width={imageSize(pkg.image).width}
+          height={imageSize(pkg.image).height}
+          loading="eager"
+          decoding="async"
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />

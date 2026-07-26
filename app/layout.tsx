@@ -52,8 +52,9 @@ const telugu = Noto_Sans_Telugu({
   display: "swap",
 });
 
+// Keep under 160 characters — longer descriptions get truncated in search results.
 const description =
-  "Shree Neelkanth Tour & Travel curates Ayodhya, Varanasi, Lucknow, Chitrakoot and Vindhyachal tour packages across Uttar Pradesh — plus SUVs, Tempo Travellers and buses on rent. Simple to book, planned end to end.";
+  "Ayodhya, Varanasi, Lucknow, Chitrakoot and Vindhyachal tour packages from Prayagraj — plus SUVs, Tempo Travellers and buses on rent, with driver.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -63,16 +64,6 @@ export const metadata: Metadata = {
   },
   description,
   applicationName: site.name,
-  keywords: [
-    "Ayodhya tour package",
-    "Varanasi tour",
-    "Lucknow Ayodhya tour",
-    "Chitrakoot darshan",
-    "Vindhyachal darshan",
-    "Prayagraj car & bus rental",
-    "Tempo Traveller on rent Prayagraj",
-    "Uttar Pradesh tour operator",
-  ],
   authors: [{ name: site.name }],
   creator: site.name,
   publisher: site.name,
@@ -96,7 +87,12 @@ export const metadata: Metadata = {
     title: "Shree Neelkanth Tour & Travel | Tours across Uttar Pradesh",
     description,
     images: [
-      { url: site.ogImage, width: 1200, height: 630, alt: site.name },
+      {
+        url: site.ogImage,
+        width: site.ogImageWidth,
+        height: site.ogImageHeight,
+        alt: site.name,
+      },
     ],
   },
   twitter: {
@@ -135,7 +131,7 @@ const jsonLd = {
   description,
   url: site.url,
   image: `${site.url}${site.ogImage}`,
-  logo: `${site.url}/logo-full.svg`,
+  logo: `${site.url}/icon-512.png`,
   telephone: contact.phone,
   email: contact.email,
   priceRange: "₹₹",
@@ -236,6 +232,12 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${body.variable} ${devanagari.variable} ${tamil.variable} ${kannada.variable} ${telugu.variable}`}
     >
+      <head>
+        {/* Every package, destination and vehicle photo is served from
+            Wikimedia, including the hero. Warm the connection early. */}
+        <link rel="preconnect" href="https://upload.wikimedia.org" />
+        <link rel="dns-prefetch" href="https://upload.wikimedia.org" />
+      </head>
       <body className="font-body antialiased">
         <script
           type="application/ld+json"

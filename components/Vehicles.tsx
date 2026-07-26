@@ -1,7 +1,7 @@
 "use client";
 
 import Reveal from "./Reveal";
-import { vehicles, contact } from "@/lib/data";
+import { vehicles, contact, imageSize } from "@/lib/data";
 import { Users, Check, MessageCircle } from "lucide-react";
 
 export default function Vehicles() {
@@ -31,6 +31,8 @@ export default function Vehicles() {
                   <img
                     src={v.image}
                     alt={`${v.name} (${v.type}) on rent — Shree Neelkanth, Prayagraj`}
+                    width={imageSize(v.image).width}
+                    height={imageSize(v.image).height}
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

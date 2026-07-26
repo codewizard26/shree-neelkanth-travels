@@ -56,7 +56,9 @@ export const site = {
   name: "Shree Neelkanth Tour & Travel",
   shortName: "Shree Neelkanth",
   url: "https://www.shrineelkanthtravels.com",
-  ogImage: "/logo.png",
+  ogImage: "/og.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   locality: "Prayagraj",
   region: "Uttar Pradesh",
   country: "IN",
@@ -68,6 +70,30 @@ export const site = {
     "https://www.facebook.com/share/14htkQ38cDM/",
   ],
 };
+
+// Intrinsic pixel dimensions of every remote image we render. Kept here so the
+// `<img>` tags and the og:image tags can declare real width/height instead of
+// guessing — missing dimensions cause layout shift, wrong ones break previews.
+const imageDims: Record<string, { width: number; height: number }> = {
+  "Shri_Ram_Janambhoomi_Mandir": { width: 1280, height: 967 },
+  "Dasaswamedh_ghat-varanasi": { width: 1920, height: 1435 },
+  "Ramghat_at_chitrakoot": { width: 1280, height: 720 },
+  "Painting_of_Vindhyavaasini_Devi": { width: 1260, height: 1574 },
+  "Prayagraj_Sangam_2": { width: 1280, height: 848 },
+  "Boats_at_sunrise_Ganges_River": { width: 1920, height: 1080 },
+  "Maruti_Suzuki_Swift": { width: 1280, height: 859 },
+  "Maruti_Suzuki_Dzire": { width: 1280, height: 747 },
+  "Toyota_Innova_Crysta": { width: 1280, height: 720 },
+  "Force_Motors_-_Traveller": { width: 1280, height: 851 },
+  "Scania_Metrolink": { width: 1280, height: 840 },
+  "WBSTC_Volvo_Bus": { width: 1280, height: 851 },
+};
+
+/** Intrinsic size of a remote image, falling back to 16:9 if unknown. */
+export function imageSize(url: string): { width: number; height: number } {
+  const hit = Object.keys(imageDims).find((key) => url.includes(key));
+  return hit ? imageDims[hit] : { width: 1280, height: 720 };
+}
 
 export const destinations: Destination[] = [
   {
