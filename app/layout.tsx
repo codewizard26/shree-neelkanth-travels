@@ -7,6 +7,7 @@ import {
   Noto_Sans_Kannada,
   Noto_Sans_Telugu,
 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { site, contact, reviews } from "@/lib/data";
 
@@ -248,6 +249,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
